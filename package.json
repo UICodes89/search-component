@@ -1,0 +1,23 @@
+{
+  "name": "search-by-string",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {    
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UICodes89/search-component.git"
+  },
+  "author": "manoj shukla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UICodes89/search-component/issues"
+  },
+  "homepage": "https://github.com/UICodes89/search-component#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-scss": "^1.4.0"
+  }
+}

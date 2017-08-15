@@ -8,18 +8,19 @@ app.component('userList', {
      var vm = this;
         vm.list;
         vm.change = function(string){
+            if(!string.length)
+              return
              searchFactory.getSearchResult(string)
-        .then(sucessHandler)
-        .catch(ErrorHandler);
+            .then(sucessHandler)
+            .catch(ErrorHandler);
 
-          function ErrorHandler(response){
-              $log.warn(response.statusText);
-        }
+            function ErrorHandler(response){
+               $log.warn(response.statusText);
+            }
 
-        function sucessHandler(response){
-          vm.list = response;
-        }
-      }
-    
-  }
+            function sucessHandler(response){
+              vm.list = response;
+            }
+        }    
+     }
 });
