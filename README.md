@@ -1,14 +1,17 @@
 # search-component
 
-clone this repo.
 
-#Run
 
-To Run this application you have to have a server like apache or node or any other server whihc suits you best.
+#prerequsites to run the project
+Node Must be installed
+clone the project
+open command prompt 
+go to the project directories
+type command ---- npm init -- press enter
+once all the required installation will be done
+just ente lite-server and enter through command line project will get open in browser it self
 
-#Access
-
-To access this application you have to use localhost and folder name after runing your server from browser address bar.
+to compile scss to css through command prompt run gulp scss
 
 
 #Search Result
@@ -21,7 +24,7 @@ you can start typing a,an or any other string every string you type it will fetc
 
 # Implementation
 
-I have used Angular 1.5.6 with css3 fexlbox , I have wrriten sass for css for now i have uploaded converted file in css form. no need to compile, bootstrap3. it's a component based structure.
+I have used Angular 1.5.6 with css3 fexlbox , I have wrriten sass for css for now i have uploaded converted file in css form. no need to compile, bootstrap3. it's a component based structure.Node Js latest version with with npm and node-saas installed other wise gulp scss command will not work.
 
 
 
