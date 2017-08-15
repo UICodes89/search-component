@@ -2,7 +2,7 @@
 
 
 
-#prerequsites to run the project
+#prerequisites to run the project
 Node Must be installed
 clone the project
 open command prompt 
