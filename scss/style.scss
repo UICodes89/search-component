@@ -1,3 +1,149 @@
-body{
-  background:#ffffff;
+$col-blue: #443f5d;
+$col-gray: #ccc;
+$col-white: #fff;
+$col-dark-grey: #738289;
+$col-light-grey: #e8e8e8;
+$col-dim-grey: #6a6a6a;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flex-box($display) {
+  -webkit-display: $display;
+  -moz-display: $display;
+  -ms-display: $display;
+  display: $display;
+}
+
+@mixin flex-box-justify($direction) {
+  -webkit-justify-content: $direction;
+  -moz-justify-content: $direction;
+  -ms-justify-content: $direction;
+  justify-content: $direction;
+}
+
+@mixin box-shadow($top, $left, $scale, $color) {
+  -webkit-box-shadow: $top $left $scale $color;
+  -moz-box-shadow: $top $left $scale $color;
+  -ms-box-shadow: $top $left $scale $color;
+  box-shadow: $top $left $scale $color;
+}
+
+@mixin padding($val1, $val2) {
+  padding: $val1 $val2;
+}
+
+@mixin margin($val1, $val2) {
+  margin: $val1 $val2;
+}
+
+.container-fluid {
+  header {
+    background-color: $col-blue;
+
+    @include box-shadow(0, 1px, 1px, $col-gray);
+
+    @include border-radius(2px);
+
+    width: 100%;
+
+    @include padding(14px, 14px);
+
+    @include margin(0, auto);
+
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  header input {
+    background: $col-white;
+    line-height: 19px;
+
+    @include padding(11px, 0);
+
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    color: $col-dark-grey;
+    font-weight: bold;
+    float: left;
+    outline: none;
+    text-indent: 40px;
+    background: none;
+    border-width: 0 0 1px 0;
+    border-bottom-color: #738289;
+  }
+
+  header .fa.fa-search {
+    color: $col-white;
+    z-index: 999;
+    position: absolute;
+    top: 19px;
+    font-size: 23px;
+    left: 15px;
+  }
+
+  section {
+    float: left;
+    width: 100%;
+
+    ul {
+      list-style: none;
+      width: 100%;
+
+      @include margin(0, auto);
+
+      text-align: left;
+
+      @include padding(0, 0);
+
+      li {
+        border-bottom: 1px solid $col-dark-grey;
+
+        @include padding(10px, 0);
+
+        overflow: hidden;
+
+        &:nth-child(even) {
+          background: $col-light-grey;
+        }
+
+        li:nth-child(odd) {
+          background: $col-dark-grey;
+        }
+
+        h2 {
+          color: $col-dim-grey;
+          font-family: sans-serif;
+
+          @include padding(0, 15px);
+        }
+
+        .other-details span {
+          font-weight: bold;
+          color: $col-dim-grey;
+          font-size: 14px;
+          float: left;
+          font-family: sans-serif;
+        }
+
+        .other-details span i {
+          @include padding(10px, 6px);
+        }
+
+        .flex-box {
+          @include flex-box(flex);
+
+          @include flex-box-justify(flex-start);
+
+          flex-direction: row;
+        }
+      }
+    }
+  }
 }
